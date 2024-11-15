@@ -102,6 +102,7 @@ class FloraCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        color: Colors.green.shade300,
         borderRadius: BorderRadius.circular(12.0),
         border: Border.all(
           color: Colors.black,

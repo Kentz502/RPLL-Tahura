@@ -52,7 +52,6 @@ class SepedaScreen extends StatelessWidget{
              ),
             ),
             Container(
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:343180345.
               margin: EdgeInsets.all(16.0),
               padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(
