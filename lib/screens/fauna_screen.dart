@@ -116,7 +116,7 @@ class FaunaCard extends StatelessWidget {
         color: Colors.green.shade300,
         borderRadius: BorderRadius.circular(12.0),
         border: Border.all(
-          color: Colors.black,
+          color: Colors.green,
           width: 1.0,
         ),
       ),
@@ -127,7 +127,7 @@ class FaunaCard extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(4.0),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.black),
+                border: Border.all(color: Colors.green),
                 borderRadius: BorderRadius.circular(12.0),
               ),
             child: Image.asset(
