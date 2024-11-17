@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:myapp/screens/sepeda_screen.dart';
 import 'package:myapp/screens/flora_screen.dart';
+import 'package:myapp/screens/mainmenu_screen.dart';
+import 'package:myapp/screens/profile_screen.dart';
 import 'package:myapp/screens/spot_screen.dart';
 import 'package:myapp/screens/fauna_screen.dart';
 import 'package:myapp/screens/sepeda_screen.dart';
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: FaunaScreen(),
+      home: MainmenuScreen(),
     );
   }
 }
