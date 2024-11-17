@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'profile_screen.dart';
 import 'map_screen.dart';
-import 'flora_screen.dart'; // Import Flora screen
-import 'fauna_screen.dart'; // Import Fauna screen
+import 'flora_screen.dart'; 
+import 'fauna_screen.dart'; 
 import 'spot_screen.dart';
 
 void main() {
