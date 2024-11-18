@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'profile_screen.dart';
 import 'map_screen.dart';
+import 'sepeda_screen.dart';
 import 'flora_screen.dart'; 
 import 'fauna_screen.dart'; 
 import 'spot_screen.dart';
@@ -30,7 +31,7 @@ class _MainmenuScreenState extends State<MainmenuScreen> {
   final List<Widget> _pages = [
     Container(), // Info page content, handled differently below
     MapScreen(),
-    Center(child: Text('ReBi Page')),
+    SepedaScreen(),
   ];
 
   @override
@@ -81,7 +82,7 @@ class _MainmenuScreenState extends State<MainmenuScreen> {
                             category,
                             style: TextStyle(fontSize: 18),
                           ),
-                          trailing: CircleAvatar(
+                           trailing: CircleAvatar(
                             radius: 18,
                             backgroundImage: NetworkImage(
                               'https://images.unsplash.com/photo-1534528740805-52a86510e3f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHxlbnwwfHwyMDI2fDIwNjI2MA&auto=format&fit=crop&w=500&q=60',

@@ -10,8 +10,8 @@ class SpotScreen extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.white,
-              Colors.green[300]!,
+              Colors.white, // White background
+              Colors.green[300]!, // Light green for gradient effect
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -19,96 +19,61 @@ class SpotScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-              child: Column(
-                children: [
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.black,
+            Align(
+              alignment: Alignment.topLeft,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.black,
+                ),
+                tooltip: "Back",
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text(
+                'SPOT',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            const SizedBox(height: 32.0),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SpotCard(
+                        title: 'Goa Belanda',
+                        image: 'assets/belanda.jpg',
+                        description:
+                            'Pada masa penjajahan Belanda, Belanda membangun berbagai infrastruktur di berbagai wilayah, termasuk di Kota Bandung. Salah satunya adalah pembangunan gua-gua buatan manusia. Gua Belanda dibangun pada tahun 1923 sebagai tempat penyimpanan dan perlindungan saat terjadi serangan udara atau serangan musuh.',
                       ),
-                      tooltip: "Back",
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      'SPOT',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                      const SizedBox(height: 16.0),
+                      SpotCard(
+                        title: 'Goa Jepang',
+                        image: 'assets/jepang.jpg',
+                        description:
+                            'Goa Jepang adalah salah satu tempat bersejarah yang dibangun oleh Jepang selama Perang Dunia II. Goa ini digunakan sebagai tempat pertahanan dan penyimpanan amunisi.',
                       ),
-                    ),
-                  ),
-                  SizedBox(height: 32.0),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SpotCard(
-                              title: 'Goa Belanda',
-                              image: 'assets/belanda.jpg',
-                              description:
-                                  'Pada masa penjajahan Belanda, Belanda membangun berbagai infrastruktur di berbagai wilayah, termasuk di Kota Bandung. Salah satunya adalah pembangunan gua-gua buatan manusia. Gua Belanda dibangun pada tahun 1923 sebagai tempat penyimpanan dan perlindungan saat terjadi serangan udara atau serangan CSRF.',
-                            ),
-                            const SizedBox(height: 16.0),
-                            SpotCard(
-                              title: 'Goa Jepang',
-                              image: 'assets/jepang.jpg',
-                              description:
-                                  'Goa Jepang adalah salah satu tempat bersejarah yang dibangun oleh Jepang selama Perang Dunia II. Goa ini digunakan sebagai tempat pertahanan dan penyimpanan amunisi.',
-                            ),
-                            const SizedBox(height: 16.0),
-                            SpotCard(
-                              title: 'Penangkaran Rusa',
-                              image: 'assets/rusa.jpg',
-                              description:
-                                  'Penangkaran Rusa adalah tempat yang didedikasikan untuk melindungi dan melestarikan spesies rusa yang terancam punah.',
-                            ),
-                            const SizedBox(height: 16.0),
-                            SpotCard(
-                              title: 'Curug Omas',
-                              image: 'assets/omas.jpg',
-                              description:
-                                  'Curug Omas adalah air terjun yang indah yang terletak di kawasan hutan, tempat yang sempurna untuk berlibur dan menikmati alam.',
-                            ),
-                            const SizedBox(height: 16.0),
-                            SpotCard(
-                              title: 'Museum Ir H Juanda',
-                              image: 'assets/museum.jpg',
-                              description:
-                                  'Museum Ir H Juanda adalah museum yang didedikasikan untuk mengenang jasa Ir. H. Juanda, seorang pahlawan nasional Indonesia.',
-                            ),
-                            const SizedBox(height: 16.0),
-                            SpotCard(
-                              title: 'Batu Batik',
-                              image: 'assets/batik.jpg',
-                              description:
-                                  'Batu Batik adalah salah satu tempat yang terkenal dengan kerajinan batiknya yang unik dan berwarna-warni.',
-                            ),
-                            const SizedBox(height: 16.0),
-                            SpotCard(
-                              title: 'Curug Dago',
-                              image: 'assets/Curugdago4.jpg',
-                              description:
-                                  'Curug Dago adalah air terjun yang terkenal di Bandung, menawarkan pemandangan yang menakjubkan dan suasana yang sejuk.',
-                            ),
-                          ],
-                        ),
+                      const SizedBox(height: 16.0),
+                      SpotCard(
+                        title: 'Penangkaran Rusa',
+                        image: 'assets/rusa.jpg',
+                        description:
+                            'Penangkaran Rusa adalah tempat yang didedikasikan untuk melindungi dan melestarikan spesies rusa yang terancam punah.',
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
           ],
@@ -139,24 +104,24 @@ class SpotCard extends StatelessWidget {
         border: Border.all(
           color: Colors.green,
           width: 1.0,
-        ),
+        ),// Green color for cards
       ),
       child: Row(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12.0),
             child: Container(
-              padding: EdgeInsets.all(4.0),
+              padding: const EdgeInsets.all(4.0),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.green),
                 borderRadius: BorderRadius.circular(12.0),
               ),
-            child: Image.asset(
-              image,
-              width: 120,
-              height: 150,
-              fit: BoxFit.cover,
-            ),
+              child: Image.asset(
+                image,
+                width: 120,
+                height: 150,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           Expanded(
@@ -169,6 +134,7 @@ class SpotCard extends StatelessWidget {
                     title,
                     style: const TextStyle(
                       fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   const SizedBox(height: 8.0),
@@ -177,6 +143,7 @@ class SpotCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 12.0,
                     ),
+                    textAlign: TextAlign.justify,
                   ),
                 ],
               ),
