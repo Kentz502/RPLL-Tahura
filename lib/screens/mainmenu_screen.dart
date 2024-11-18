@@ -29,7 +29,7 @@ class _MainmenuScreenState extends State<MainmenuScreen> {
 
   final List<Widget> _pages = [
     Container(), // Info page content, handled differently below
-    Center(child: Text('Map Page')),
+    MapScreen(),
     Center(child: Text('ReBi Page')),
   ];
 
@@ -102,7 +102,7 @@ class _MainmenuScreenState extends State<MainmenuScreen> {
                                   builder: (context) => FaunaScreen(),
                                 ),
                               );
-                            } else if (context == 'Spot') {
+                            } else if (category == 'Spot') {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
