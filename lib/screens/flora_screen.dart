@@ -6,18 +6,7 @@ class FloraScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Colors.white,
-              Colors.green[300]!,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
-        child: Column(
+        body: Column(
           children: [
             Align(
               alignment: Alignment.topLeft,
@@ -81,8 +70,7 @@ class FloraScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
 
@@ -103,7 +91,7 @@ class FloraCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.green.shade300,
-        borderRadius: BorderRadius.circular(12.0),
+        borderRadius: BorderRadius.circular(30.0),
         border: Border.all(
           color: Colors.green,
           width: 1.0,
@@ -112,7 +100,7 @@ class FloraCard extends StatelessWidget {
       child: Row(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(12.0),
+            borderRadius: BorderRadius.circular(30.0),
             child: Container(
               padding: EdgeInsets.all(4.0),
               decoration: BoxDecoration(
